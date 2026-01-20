@@ -4,38 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mentions Légales | HYDREX</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css"> 
     <style>
-        .legal-content { max-width: 800px; margin: 50px auto; text-align: left; padding: 20px; line-height: 1.6; color: #ccc; }
-        h2 { color: #ff4d00; margin-top: 30px; }
+        body {
+            background-color: #050505; /* Noir profond */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .legal-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px); /* Effet flou moderne */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 50px;
+            max-width: 900px;
+            width: 90%;
+            margin: 40px 0;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            color: #ff4d00; /* Ton orange signature */
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #ff4d00;
+            display: inline-block;
+        }
+
+        h2 {
+            color: #ffffff;
+            font-size: 1.2rem;
+            margin-top: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        p, li {
+            color: #a0a0a0; /* Gris clair pour la lisibilité */
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        strong {
+            color: #fff;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 25px;
+            background-color: #ff4d00;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+
+        .back-btn:hover {
+            background-color: #e64500;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 77, 0, 0.4);
+        }
     </style>
 </head>
 <body>
-    <div class="legal-content">
+
+    <div class="legal-card">
         <h1>Mentions Légales</h1>
         
-        <h2>1. Éditeur du site</h2>
-        <p>Le site <strong>https://hydrex-app-seven.vercel.app/</strong> est édité par :<br>
-        Nom/Pseudo : HYDREX<br>
-        Contact : [Ton Adresse Email]<br>
-        Directeur de la publication : HYDREX</p>
+        <section>
+            <h2>1. Édition du site</h2>
+            <p>Le présent site, accessible à l’URL <strong>https://hydrex-app-seven.vercel.app/</strong>, est édité par <strong>HYDREX</strong>, agissant en qualité de producteur de musique indépendant.</p>
+        </section>
 
-        <h2>2. Hébergement</h2>
-        <p>Le site est hébergé par <strong>Vercel Inc.</strong><br>
-        Adresse : 340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis.<br>
-        Site web : https://vercel.com</p>
+        <section>
+            <h2>2. Hébergement</h2>
+            <p>Le site est hébergé par la société <strong>Vercel Inc.</strong>, située à Walnut, Californie, USA. Contact technique : <strong>https://vercel.com</strong>.</p>
+        </section>
 
-        <h2>3. Propriété intellectuelle</h2>
-        <p>L'ensemble du contenu de ce site (textes, logos, compositions musicales, visuels) est la propriété exclusive de HYDREX. Toute reproduction, même partielle, est interdite sans autorisation préalable.</p>
+        <section>
+            <h2>3. Propriété Intellectuelle</h2>
+            <p>Toutes les œuvres musicales, visuels, logos et textes présents sur ce site sont la propriété exclusive de <strong>HYDREX</strong>. Toute utilisation non autorisée des instrumentales (beats) sans licence valide est strictement interdite et fera l'objet de poursuites.</p>
+        </section>
 
-        <h2>4. Ventes et Paiements</h2>
-        <p>Les transactions commerciales et la distribution des licences musicales sont gérées par la plateforme tierce <strong>BeatStars Inc.</strong> Les conditions générales de vente applicables sont celles de BeatStars.</p>
+        <section>
+            <h2>4. Commerce et Licences</h2>
+            <p>La vente de licences musicales est opérée via la plateforme <strong>BeatStars</strong>. Les conditions de vente, de remboursement et de livraison des fichiers sont régies par les termes de service de BeatStars et les contrats de licence spécifiques choisis par l'utilisateur lors de l'achat.</p>
+        </section>
 
-        <h2>5. Données personnelles</h2>
-        <p>Conformément au RGPD, vous disposez d'un droit d'accès et de modification de vos données. Pour toute demande, contactez-nous par e-mail.</p>
-        
-        <br>
-        <a href="index.html" style="color: #ff4d00;">← Retour à l'accueil</a>
+        <section>
+            <h2>5. Contact</h2>
+            <p>Pour toute question relative à l'utilisation du site ou aux licences, vous pouvez nous contacter par e-mail : <strong>[METS_TON_MAIL_ICI]</strong>.</p>
+        </section>
+
+        <a href="index.html" class="back-btn">Retour au Studio</a>
     </div>
+
 </body>
 </html>

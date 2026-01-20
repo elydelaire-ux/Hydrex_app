@@ -312,6 +312,10 @@ header {
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .license-card:hover {
@@ -327,14 +331,18 @@ header {
 
 .popular-tag {
     position: absolute;
-    top: 15px;
-    right: -30px;
+    top: 30px;
+    right: -45px;
     background-color: var(--accent-color);
     color: #fff;
-    padding: 5px 30px;
+    padding: 5px 0;
+    width: 150px;
+    text-align: center;
     transform: rotate(45deg);
     font-size: 0.8rem;
     font-weight: 700;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
 }
 
 .license-card h3 {
@@ -353,6 +361,8 @@ header {
     text-align: left;
     margin-bottom: 30px;
     margin-left: 10%;
+    flex-grow: 1;
+    /* Pushes button down if needed, but margin-top: auto on button is safer */
 }
 
 .license-card ul li {
@@ -374,6 +384,8 @@ header {
     border-radius: 5px;
     font-weight: 700;
     transition: var(--transition);
+    margin-top: auto;
+    /* Ensures button sticks to bottom */
 }
 
 .license-card:hover .btn-license {

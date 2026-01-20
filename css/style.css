@@ -301,6 +301,18 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-bottom: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+    box-shadow: 0 0 30px rgba(255, 77, 0, 0.2);
 }
 
 .license-card {
@@ -553,11 +565,15 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 50%;
+        width: 100%;
+        /* Full width for better mobile UX */
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
         z-index: 999;
-        justify-content: space-evenly;
+        justify-content: center;
+        /* Centered items */
+        gap: 40px;
+        /* Better spacing */
     }
 
     .nav-links.nav-active {
@@ -570,11 +586,28 @@ footer {
 
     .hero-content h1 {
         font-size: 2.5rem;
+        padding: 0 10px;
+    }
+
+    .hero-content .slogan {
+        font-size: 1rem;
+        margin-bottom: 30px;
     }
 
     .about-content {
         flex-direction: column;
         text-align: center;
+        gap: 30px;
+    }
+
+    .profile-img-container {
+        width: 100%;
+    }
+
+    .profile-img {
+        width: 250px !important;
+        /* Smaller text/img on mobile */
+        height: 250px !important;
     }
 
     .contact-wrapper {
@@ -594,6 +627,42 @@ footer {
 
     .footer-links a {
         margin-left: 0;
+    }
+
+    /* Fix Pricing Card sizing on small screens */
+    .licenses-grid {
+        grid-template-columns: 1fr;
+        /* Stack cards */
+        padding: 0 10px;
+    }
+
+    .license-card {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .popular-tag {
+        /* Adjust tag for smaller cards if needed, current setup is absolute so check overlap */
+        right: -35px;
+        top: 25px;
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .btn-license,
+    .cta-btn {
+        width: 100%;
+        /* Full width buttons */
     }
 }
 
